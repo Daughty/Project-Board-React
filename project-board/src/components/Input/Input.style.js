@@ -5,6 +5,7 @@ width:${props=>{
     if(props.custom_type === 'createIssue') return '250px';
     if(props.full_width) return '500px';
     if(props.custom_type === 'dueDate') return '280px';
+    if(props.custom_type === 'editName') return '110px';
     return '100px';
 }};
 height:20px;
@@ -16,10 +17,14 @@ font-size:18px;
 padding:10px;
 margin:${props=>{
     if(props.custom_type==='editName') return '4px';
-    if(props.custom_type === 'createIssue') return '5px 0px 10px 0px';
+    if(props.custom_type === 'createIssue') return '';
     return '10px';
 }};
-background-color:#F4F5F7;
+background-color:${props=>{
+    if(props.custom_type==='editName') return 'transparent';
+    if(props.custom_type === 'createIssue') return '';
+    return '#F4F5F7';
+}};
 transition:'width 2s';
 
 &:hover{
