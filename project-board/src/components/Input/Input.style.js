@@ -46,7 +46,15 @@ background-color:#fff;
         if(props.custom_type === 'editName') return'45%';
         return ''
     }};
-    }  
+    }
+    width:${props=>{
+        if(props.custom_type === 'createIssue') return '100%';
+        return '';
+    }};
+    margin:${props=>{
+        if(props.custom_type === 'createIssue') return '5px';
+        return '';
+    }};
 }
 `
 

@@ -154,7 +154,7 @@ margin:${props=>{
     return '';
 }};
 max-width:${props=>{
-    if(props.custom_type==='stat_header') return '290px';
+    if(props.custom_type==='stat_header') return 'none';
     return '';
 }};
 }

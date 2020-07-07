@@ -154,7 +154,18 @@ padding:${props=>{
     if(props.custom_type==='app_wrap') return '10px';
     return '';
 }};
+margin:${props=>{
+    if(props.custom_type==='avatar_wrap') return '2px';
+    return '';
+}};
 
+}
+@media (min-width:768px) and (max-width:1024px){
+    width:${props=>props.custom_type==='board_wrap'?'100%':''};
+    justify-content:${props=>props.custom_type==='board_wrap'?'flex-start':''};
+    height:${props=>props.custom_type==='app_wrap'?'100%':''};
+    overflow-x:${props=>props.custom_type==='board_wrap'?'auto':''};
+    
 }
 `
 
