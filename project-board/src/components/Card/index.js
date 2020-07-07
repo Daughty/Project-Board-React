@@ -153,6 +153,10 @@ margin:${props=>{
     if(props.custom_type==='stat_card') return '0px';
     return '';
 }};
+max-width:${props=>{
+    if(props.custom_type==='stat_header') return '290px';
+    return '';
+}};
 }
 
 `

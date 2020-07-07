@@ -14,3 +14,9 @@ code {
   display:flex;
   align-self:stretch;
 }
+
+@media (max-width: 768px){
+  .taskWrap{
+    width:100%;
+  }
+}

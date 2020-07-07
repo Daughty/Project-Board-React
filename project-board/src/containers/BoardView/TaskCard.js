@@ -62,7 +62,7 @@ class TaskCard extends Component {
         return(
            <Draggable draggableId={String(this.props.id)} index={this.props.index}>
             {(provided)=>(
-                <div ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}>
+                <div className="taskWrap" ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}>
                   <Container 
                   custom_type="col" 
                   full_width={true}

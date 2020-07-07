@@ -34,9 +34,8 @@ export const changeStatusName = (newName,statusId) =>{
     statusId
     };  
 }
-export const changeSort = (droppableIdStart,droppableIdEnd,
-    droppableIndexStart,droppableIndexEnd,
-    draggableId) => {
+
+export const changeSort = (droppableIdStart,droppableIdEnd,droppableIndexStart,droppableIndexEnd,draggableId) => {
     return {
     type:action.SORT,
     payload:{droppableIdStart,droppableIdEnd,
