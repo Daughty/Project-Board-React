@@ -44,7 +44,7 @@ const taskReducer = (state = initialState ,action) => {
         case 'SORT':
             const {droppableIdStart,droppableIdEnd,
                 droppableIndexStart,droppableIndexEnd,
-                draggableId} = action.payload;
+                } = action.payload;
             const newState = {...state};
             // in same status board
             if(droppableIdStart === droppableIdEnd){

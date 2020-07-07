@@ -74,7 +74,7 @@ background-color:${props=>{
     return'';
 }};
 background-image:${props=>{
-    if(props.custom_type === 'app_wrap') return 'linear-gradient(to top, #accbee 0%, #e7f0fd 100%);';
+    if(props.custom_type === 'app_wrap') return 'linear-gradient(-225deg, #2CD8D5 0%, #6B8DD6 48%, #8E37D7 100%)';
     return '';
 }};
 
