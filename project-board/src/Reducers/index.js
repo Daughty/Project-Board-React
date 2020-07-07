@@ -23,7 +23,6 @@ const taskReducer = (state = initialState ,action) => {
                 }
                    return entry;
             });
-
             return {
                 ...state,
                 statusList:newStatList
@@ -41,6 +40,31 @@ const taskReducer = (state = initialState ,action) => {
                 statusList:newStatusList,
                 
             }
+        case 'EDIT_TASK':
+            debugger;
+            const editList = [...state.statusList];
+            const editedTask = {...state.defaultTask , ...action.taskObj};
+            const reqStatList = editList.find((entry)=>(entry.id===action.statusId));
+            const reqTask = reqStatList.tasks.map((entry)=>{
+                if(entry.id===action.taskObj.id){
+                    return editedTask;
+                }
+                return entry;
+            }
+            );
+            const updatedList = editList.map((entry)=>{
+                if(entry.id===action.statusId){
+                   entry.tasks = [...reqTask];
+                }
+                return entry;
+            }
+            );
+            console.log(reqTask);
+            console.log(updatedList);
+            return {
+                ...state,
+                statusList:updatedList,  
+                }
         case 'SORT':
             const {droppableIdStart,droppableIdEnd,
                 droppableIndexStart,droppableIndexEnd,

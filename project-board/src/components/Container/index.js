@@ -145,7 +145,8 @@ width:100%;
 flex-direction:${props=>{
     if(props.custom_type==='board_wrap'||
     props.custom_type==='app_wrap'||
-    props.custom_type==='stat_wrap'
+    props.custom_type==='stat_wrap'||
+    props.custom_type==='mo_col_wrap'
     ) return 'column';
     if(props.custom_type==='task_col') return 'column';
     return 'row';
@@ -158,6 +159,7 @@ margin:${props=>{
     if(props.custom_type==='avatar_wrap') return '2px';
     return '';
 }};
+height:${props=>props.custom_type==='app_wrap'?'100%':''};
 
 }
 @media (min-width:768px) and (max-width:1024px){

@@ -6,9 +6,7 @@ margin: 0 auto;
 position:absolute;
 top:4px;
 right:-15px;
-&:selection{
-  background:transparent;
-}
+z-index:100;
 `
 
 export const DropDownList = styled.ul`
@@ -31,9 +29,7 @@ box-shadow:${props=>{
   if(props.isOpen===true) return '0px 2px 6px 0px #e4e4e4';
   return '0px 2px 6px 0px #e4e4e4';
 }};
-&:selection{
-  background:transparent;
-}
+
 `
 
 export const ListItem = styled.li`

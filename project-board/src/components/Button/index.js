@@ -7,7 +7,7 @@ const Button = (props) => {
     const handleClick = (e) => {
       e.preventDefault();
       console.log("this link was clicked");
-      //window.location.href = props.href;
+      props.onClick();
     }
 
     return (

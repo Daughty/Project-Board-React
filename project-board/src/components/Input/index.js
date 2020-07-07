@@ -23,7 +23,10 @@ class Input extends Component {
         if(this.props.custom_type==='createIssue'){
           this.setState({val:''});
         }
-      },1200);
+        if(this.props.formTaskObj) {
+          this.props.formTaskObj(this.props.name,this.state.val);
+        }
+      },this.props.uniqueMark?500:1200);
       
   }
   render() {

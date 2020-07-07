@@ -7,7 +7,22 @@ import Button from '../../components/Button';
 
 
 class EditTask extends Component{
-    state={}
+    state={
+            name:this.props.taskName,
+            dueDate:'',
+            progress:'',
+            assignee:'',
+            id:this.props.id
+    }
+
+    formTaskObj = (key,value) => {
+      this.setState({[key]:value});
+    }
+    handleSaveObj=()=>{
+    const sample = this.state;
+    sample.progress = sample.progress + '%';
+    this.props.handleSave(sample);
+    }
 
     render(){
         return(
@@ -18,6 +33,9 @@ class EditTask extends Component{
                     full_width placeholder="Task name" 
                     val={this.props.taskName}
                     hidden={true}
+                    uniqueMark="mod_input"
+                    name="name"
+                    formTaskObj={this.formTaskObj}
                     /> 
                 </Container>
                 <Container custom_type="extra_wrap">
@@ -25,13 +43,19 @@ class EditTask extends Component{
                      placeholder="Enter Due Date" 
                     type="date"
                     label="Due:"
+                    uniqueMark="mod_input"
+                    name="dueDate"
+                    formTaskObj={this.formTaskObj}
                     />
                 </Container>
                 <Container custom_type="extra_wrap">
                     <Input custom_type="dueDate" 
                     placeholder="Enter Progress(%)" 
-                    type="text"
+                    type="number"
                     label="Progress:"
+                    uniqueMark="mod_input"
+                    name="progress"
+                    formTaskObj={this.formTaskObj}
                     />
                 </Container>
                 <Container custom_type="extra_wrap">
@@ -39,9 +63,12 @@ class EditTask extends Component{
                     placeholder="Assigned To" 
                     type="text"
                     label="Assignee:"
+                    uniqueMark="mod_input"
+                    name="assignee"
+                    formTaskObj={this.formTaskObj}
                     />
                 </Container>
-                <Button label="save"/>
+                <Button label="save" onClick={this.handleSaveObj}/>
              </Container>
 
             </Modal>

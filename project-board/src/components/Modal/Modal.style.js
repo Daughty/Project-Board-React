@@ -16,11 +16,10 @@ box-sizing: border-box;
 transition: all 0.3s ease-out;
 
 
-@media (min-width: 600px) {
-    .Modal {
-        width: 500px;
-        left: calc(50% - 250px);
-    }
+@media (max-width: 768px) {
+width: 95%;
+left:5px;
+        
 }
 `
 export const Overlay = styled.div`

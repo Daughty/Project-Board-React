@@ -8,7 +8,7 @@ import Container from './../../components/Container';
 import DropDown from './../../components/DropDown';
 
 import { connect } from 'react-redux';
-import { delTask } from './../../Action Creators';
+import { delTask,editTask } from './../../Action Creators';
 
 import {Draggable} from "react-beautiful-dnd";
 
@@ -48,7 +48,7 @@ class TaskCard extends Component {
 
     handleSelect = (id) => {
        switch(id){
-           case '1': // Add label
+        //    case '1': // Add label
            case '2': // Add Flag
             return this.addFlag();
            case '3': // Delete task
@@ -56,6 +56,10 @@ class TaskCard extends Component {
            default:
                return;
        }
+    }
+    handleSave = (taskObj) => {
+      this.props.editTask(taskObj,this.props.status_id);
+      this.hideModal();
     }
 
     render(){
@@ -87,6 +91,7 @@ class TaskCard extends Component {
                        </Container>
        
                        <Container custom_type="avatar_wrap" flag={this.state.flag}>
+                           <Label custom_type="due_date_label">{'Due:'+this.props.due}</Label>
                            <Avatar name={this.props.assignee} size="30" round={true} maxInitials={2}/>
                            <i className="fa fa-flag"></i>
                        </Container>
@@ -95,6 +100,8 @@ class TaskCard extends Component {
                    <EditTask showModal={this.state.openModal} 
                    hideModal={this.hideModal}
                    taskName={this.props.taskName}
+                   handleSave={this.handleSave}
+                   id={this.props.id}
                    />
                    :<Fragment/>
                    }
@@ -110,6 +117,7 @@ class TaskCard extends Component {
 const mapDispatchToProps =  dispatch => {
     return {
         delTask:(taskId,statusId) => dispatch(delTask(taskId,statusId)),
+        editTask:(taskObj,statusId)=>dispatch(editTask(taskObj,statusId))
     }
 }
 

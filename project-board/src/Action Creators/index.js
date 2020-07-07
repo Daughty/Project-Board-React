@@ -20,10 +20,11 @@ export const delTask = (taskId,statusId) => {
 }
 
 
-export const editTask = (taskObj) =>{
+export const editTask = (taskObj,statusId) =>{
     return {
     type:action.EDIT_TASK,
     taskObj,
+    statusId,
     };  
 }
 

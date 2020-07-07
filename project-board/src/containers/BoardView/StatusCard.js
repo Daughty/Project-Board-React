@@ -55,6 +55,7 @@ class StatusCard extends Component {
                           assignee={task.assignee}
                           index={index}
                           status_id={this.props.cardId}
+                          due={task.dueDate?task.dueDate:''}
                           />)
                   })}
                   {provided.placeholder}

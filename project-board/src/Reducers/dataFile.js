@@ -70,9 +70,8 @@ export const initialState = {
         id:'0',
         name:'Do the dashboard css fixes',
         assignee:'Jonh Doe',
-        progress:'25%',
-        status_id:'s1',
-        index_pos:'1', 
+        progress:'25%', 
+        dueDate:'2020/10/07',
     },
     taskCount:13,
     statusList:[
@@ -84,6 +83,7 @@ export const initialState = {
                 progress:'25%',
                 status_id:'s1',
                 index_pos:'0',
+                dueDate:'2020/12/07',
             },
             {
                 id:'2',
@@ -92,14 +92,16 @@ export const initialState = {
                 progress:'50%',
                 status_id:'s2',
                 index_pos:'1',
+                dueDate:'2020/12/07',
             },
             {
                 id:'3',
-                name:'Task 3 for ToDo section',
+                name:'Due Date Shots',
                 assignee:'Samie Joe',
                 progress:'25%',
                 status_id:'s3',
                 index_pos:'2',
+                dueDate:'2020/08/10',
             },
             {
                 id:'4',
@@ -108,6 +110,7 @@ export const initialState = {
                 progress:'90%',
                 status_id:'s4',
                 index_pos:'3',
+                dueDate:'2020/08/30',
             },
            
     
@@ -120,6 +123,7 @@ export const initialState = {
                 progress:'25%',
                 status_id:'s1',
                 index_pos:'0',
+                dueDate:'2020/08/30',
             },
             {
                 id:'6',
@@ -128,6 +132,7 @@ export const initialState = {
                 progress:'50%',
                 status_id:'s2',
                 index_pos:'1',
+                dueDate:'2020/08/30',
             },
             {
                 id:'7',
@@ -136,6 +141,7 @@ export const initialState = {
                 progress:'25%',
                 status_id:'s3',
                 index_pos:'2',
+                dueDate:'2020/08/30',
             },
           
         ],},
@@ -147,6 +153,7 @@ export const initialState = {
                 progress:'25%',
                 status_id:'s1',
                 index_pos:'0',
+                dueDate:'2020/08/30',
             },
             {
                 id:'9',
@@ -155,6 +162,7 @@ export const initialState = {
                 progress:'50%',
                 status_id:'s2',
                 index_pos:'1',
+                dueDate:'2020/08/30',
             },
             {
                 id:'10',
@@ -163,6 +171,7 @@ export const initialState = {
                 progress:'25%',
                 status_id:'s3',
                 index_pos:'2',
+                dueDate:'2020/08/30',
             },
            
         
@@ -174,6 +183,7 @@ export const initialState = {
                 assignee:'Choir Dior',
                 progress:'25%',
                 status_id:'s1',
+                dueDate:'2020/08/30',
             },
             {
                 id:'12',
@@ -182,6 +192,7 @@ export const initialState = {
                 progress:'50%',
                 status_id:'s2',
                 index_pos:'1',
+                dueDate:'2020/08/30',
             },
             {
                 id:'13',
@@ -190,6 +201,7 @@ export const initialState = {
                 progress:'25%',
                 status_id:'s3',
                 index_pos:'2',
+                dueDate:'2020/08/30',
             },
         ],},
     ]  
