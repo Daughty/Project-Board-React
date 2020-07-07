@@ -1,0 +1,196 @@
+export const initialState = {
+    // tasks:[
+    //     {
+    //         id:'1',
+    //         name:'Task 1Do the dashboard css fixes',
+    //         assignee:'Choir Dior',
+    //         progress:'25%',
+    //         status_id:'s1',
+    //         index_pos:'0',
+    //     },
+    //     {
+    //         id:'2',
+    //         name:'Task 2Do the dashboard css fixes',
+    //         assignee:'Daughty Sharma',
+    //         progress:'50%',
+    //         status_id:'s2',
+    //         index_pos:'1',
+    //     },
+    //     {
+    //         id:'3',
+    //         name:'Task 3Do the dashboard css fixes',
+    //         assignee:'Samie Joe',
+    //         progress:'25%',
+    //         status_id:'s3',
+    //         index_pos:'2',
+    //     },
+    //     {
+    //         id:'4',
+    //         name:'Task 4Do the dashboard css fixes Do the dashboard css fixes',
+    //         assignee:'Alissa Parker',
+    //         progress:'90%',
+    //         status_id:'s4',
+    //         index_pos:'3',
+    //     },
+    //     {
+    //         id:'5',
+    //         name:'Task 5Do the dashboard css fixes',
+    //         assignee:'Choir Dior',
+    //         progress:'25%',
+    //         status_id:'s3',
+    //         index_pos:'4',
+    //     },
+    //     {
+    //         id:'6',
+    //         name:'Task 6Do the dashboard css fixes',
+    //         assignee:'Daughty Sharma',
+    //         progress:'50%',
+    //         status_id:'s1',
+    //         index_pos:'5',
+    //     },
+    //     {
+    //         id:'7',
+    //         name:'Task 7Do the dashboard css fixes',
+    //         assignee:'Samie Joe',
+    //         progress:'25%',
+    //         status_id:'s4',
+    //         index_pos:'6',
+    //     },
+    //     {
+    //         id:'8',
+    //         name:'Task 8Do the dashboard css fixes Do the dashboard css fixes',
+    //         assignee:'Alissa Parker',
+    //         progress:'90%',
+    //         status_id:'s2',
+    //         index_pos:'7',
+    //     }
+
+    // ],
+    defaultTask:{
+        id:'0',
+        name:'Do the dashboard css fixes',
+        assignee:'Jonh Doe',
+        progress:'25%',
+        status_id:'s1',
+        index_pos:'1', 
+    },
+    taskCount:13,
+    statusList:[
+        {id:'s1',name:'To Do',index:'1',tasks:[
+            {
+                id:'1',
+                name:'Task 1 for ToDo section',
+                assignee:'Choir Dior',
+                progress:'25%',
+                status_id:'s1',
+                index_pos:'0',
+            },
+            {
+                id:'2',
+                name:'Task 2 for ToDo section',
+                assignee:'Daughty Sharma',
+                progress:'50%',
+                status_id:'s2',
+                index_pos:'1',
+            },
+            {
+                id:'3',
+                name:'Task 3 for ToDo section',
+                assignee:'Samie Joe',
+                progress:'25%',
+                status_id:'s3',
+                index_pos:'2',
+            },
+            {
+                id:'4',
+                name:'Task 4 for ToDo section',
+                assignee:'Alissa Parker',
+                progress:'90%',
+                status_id:'s4',
+                index_pos:'3',
+            },
+           
+    
+        ],},
+        {id:'s2',name:'In Progress',index:'2',tasks:[
+            {
+                id:'5',
+                name:'Task 1 In Progress section',
+                assignee:'Choir Dior',
+                progress:'25%',
+                status_id:'s1',
+                index_pos:'0',
+            },
+            {
+                id:'6',
+                name:'Task 2 In Progress section',
+                assignee:'Daughty Sharma',
+                progress:'50%',
+                status_id:'s2',
+                index_pos:'1',
+            },
+            {
+                id:'7',
+                name:'Task 3 In Progress section',
+                assignee:'Samie Joe',
+                progress:'25%',
+                status_id:'s3',
+                index_pos:'2',
+            },
+          
+        ],},
+        {id:'s3',name:'On Hold',index:'3',tasks:[
+            {
+                id:'8',
+                name:'Task 1 On Hold section',
+                assignee:'Choir Dior',
+                progress:'25%',
+                status_id:'s1',
+                index_pos:'0',
+            },
+            {
+                id:'9',
+                name:'Task 2 On Hold section',
+                assignee:'Daughty Sharma',
+                progress:'50%',
+                status_id:'s2',
+                index_pos:'1',
+            },
+            {
+                id:'10',
+                name:'Task 3 On Hold section',
+                assignee:'Samie Joe',
+                progress:'25%',
+                status_id:'s3',
+                index_pos:'2',
+            },
+           
+        
+        ],},
+        {id:'s4',name:'Done',index:'4',tasks:[
+            {
+                id:'11',
+                name:'Task 1 Done section',
+                assignee:'Choir Dior',
+                progress:'25%',
+                status_id:'s1',
+            },
+            {
+                id:'12',
+                name:'Task 2Done section',
+                assignee:'Daughty Sharma',
+                progress:'50%',
+                status_id:'s2',
+                index_pos:'1',
+            },
+            {
+                id:'13',
+                name:'Task 3Done section',
+                assignee:'Samie Joe',
+                progress:'25%',
+                status_id:'s3',
+                index_pos:'2',
+            },
+        ],},
+    ]  
+};
