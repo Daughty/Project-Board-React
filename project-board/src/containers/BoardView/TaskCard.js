@@ -2,7 +2,7 @@ import React , { Component,Fragment } from 'react';
 import Avatar from 'react-avatar';
 
 import Card from './../../components/Card';
-import Label from './../../components/Text';
+import {Label} from './../../components/Text';
 import EditTask from './EditTask';
 import Container from './../../components/Container';
 import DropDown from './../../components/DropDown';
@@ -91,7 +91,11 @@ class TaskCard extends Component {
                        </Container>
        
                        <Container custom_type="avatar_wrap" flag={this.state.flag}>
-                           <Label custom_type="due_date_label">{'Due:'+this.props.due}</Label>
+                           <Container custom_type="due_wrap">
+                           <Label custom_type="due_date_label">	
+                            <i className="fa fa-calendar"></i>{this.props.due}</Label>
+                           </Container>
+                           
                            <Avatar name={this.props.assignee} size="30" round={true} maxInitials={2}/>
                            <i className="fa fa-flag"></i>
                        </Container>
@@ -101,6 +105,9 @@ class TaskCard extends Component {
                    hideModal={this.hideModal}
                    taskName={this.props.taskName}
                    handleSave={this.handleSave}
+                   progress={this.props.progress}
+                   assignee={this.props.assignee}
+                   due={this.props.due}
                    id={this.props.id}
                    />
                    :<Fragment/>

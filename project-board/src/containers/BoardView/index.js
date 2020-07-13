@@ -1,9 +1,10 @@
-import React , { Component } from 'react';
+import React , { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import { DragDropContext } from "react-beautiful-dnd";
 
 //Components import
 import Container from '../../components/Container'
+import {Ul,Li} from './../../components/Text';
 
 //Sub-Containers import
 import StatusCard from './StatusCard'
@@ -28,6 +29,17 @@ class BoardView extends Component{
 
     render(){
         return(
+           <Container custom_type="board_nav_wrap">
+            <Container custom_type="nav_wrap_ver_two">
+                <Ul custom_type="nav_wrap_ul" versionTwo>
+                    <Li  key="1l"custom_type="nav_wrap_li">List</Li>
+                    <Li  key="2l"custom_type="nav_wrap_li" >Gantt</Li>
+                    <Li  key="3l"custom_type="nav_wrap_li" active>Board</Li>
+                    <Li  key="4l"custom_type="nav_wrap_li">Calender</Li>
+                    <Li  key="5l"custom_type="nav_wrap_li">Process</Li>
+                </Ul>
+            </Container>
+
            <DragDropContext onDragEnd={this.onDragEnd}>
             <Container custom_type="board_wrap">
                 {this.props.statusList.map((entry)=>{
@@ -41,6 +53,7 @@ class BoardView extends Component{
                 })}
             </Container>
            </DragDropContext>
+           </Container>
         )
     }
 }

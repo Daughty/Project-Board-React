@@ -1,6 +1,6 @@
 import React , { Component,Fragment } from 'react';
 import StyledInput from './Input.style';
-import Label from './../Text';
+import {Label} from './../Text';
 
 
 

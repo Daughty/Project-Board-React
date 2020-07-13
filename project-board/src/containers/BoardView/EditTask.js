@@ -5,13 +5,12 @@ import Container from '../../components/Container';
 import Button from '../../components/Button';
 
 
-
 class EditTask extends Component{
     state={
             name:this.props.taskName,
-            dueDate:'',
-            progress:'',
-            assignee:'',
+            dueDate:this.props.due,
+            progress:(this.props.progress).split('%')[0],
+            assignee:this.props.assignee,
             id:this.props.id
     }
 
@@ -40,7 +39,8 @@ class EditTask extends Component{
                 </Container>
                 <Container custom_type="extra_wrap">
                     <Input custom_type="dueDate" 
-                     placeholder="Enter Due Date" 
+                     placeholder="Enter Due Date"
+                     val={this.props.due} 
                     type="date"
                     label="Due:"
                     uniqueMark="mod_input"
@@ -51,6 +51,7 @@ class EditTask extends Component{
                 <Container custom_type="extra_wrap">
                     <Input custom_type="dueDate" 
                     placeholder="Enter Progress(%)" 
+                    val={this.state.progress}
                     type="number"
                     label="Progress:"
                     uniqueMark="mod_input"
@@ -60,7 +61,8 @@ class EditTask extends Component{
                 </Container>
                 <Container custom_type="extra_wrap">
                     <Input custom_type="dueDate" 
-                    placeholder="Assigned To" 
+                    placeholder="Assigned To"
+                    val={this.state.assignee} 
                     type="text"
                     label="Assignee:"
                     uniqueMark="mod_input"

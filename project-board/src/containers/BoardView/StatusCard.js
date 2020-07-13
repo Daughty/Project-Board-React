@@ -27,7 +27,6 @@ class StatusCard extends Component {
     handleInput = (newName) => {
        this.props.changeStatusName(newName,this.props.cardId);
     } 
-  
     render(){
         
         return (

@@ -35,8 +35,8 @@ align-self:${props=>{
 background-color:${props=>{
     if(props.custom_type==='task_card' && props.flag)return 'rgb(255, 235, 230,1.1)';
     if(props.custom_type==='task_card')return '#fff';
-    if(props.custom_type==='stat_card') return 'rgb(246, 246, 246,0.45)';
-    return 'rgb(246, 246, 246,0.45)';
+    if(props.custom_type==='stat_card') return '#F4F5F7';
+    return '#F4F5F7';
 }};
 
 background-image:${props=>{

@@ -1,7 +1,7 @@
 import React from "react";
 import Container from '../Container';
 import { DropDownContainer , DropDownList , ListItem } from './Drop.style'
-import Label from './../Text';
+import {Label} from './../Text';
 
 
 const DropDown = props => {
